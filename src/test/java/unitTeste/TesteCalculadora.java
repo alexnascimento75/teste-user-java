@@ -1,15 +1,18 @@
-// Bibliotecas
+package unitTeste;// Bibliotecas
 
 import br.com.iterasys.Calculadora;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TesteCalculadora {
-// Atributos
+    // Atributos
 // Funções e Métodos
     @Test
-    public void testeSomarDoisNumeros(){
+    public void testeSomarDoisNumeros() {
 // Configurão - Execução - Validação
 // Valores de entrada
         double num1 = 7;
@@ -20,8 +23,42 @@ public class TesteCalculadora {
         assertEquals(resultadoAtual, resultadoEsperado);
     }
 
+
+    // Este é um teste de unidade data driven - direcionados por dados
+    @ParameterizedTest
+    @CsvSource(value = {
+            "7, 5, 12.0",
+            "56, 44, 100.0",
+            "20, 30, 50.0",
+            "10, 0, 10.0",
+            "15, -5, 10.0",
+            "-8, -6, -14.0"
+    }, delimiter = ',')
+    public void testeSomarDoisNumeroslendolista(String txtnum1, String txtnum2, String resultadoEsperado) {
+// Configurão - Execução - Validação
+// Valores de entrada
+        // Os dados de entrada e o resultado vem da lista
+
+        double resultadoAtual = Calculadora.somarDoisNumeros(Integer.valueOf(txtnum1), Integer.valueOf(txtnum2));
+// Validação
+        assertEquals(Double.valueOf(resultadoEsperado), resultadoAtual);
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "csv/massaSomar.csv", numLinesToSkip = 1, delimiter = ',')
+    public void testeSomarDoisNumeroslendoArquivo(String txtnum1, String txtnum2, String resultadoEsperado) {
+// Configurão - Execução - Validação
+// Valores de entrada
+        // Os dados de entrada e o resultado vem da lista
+
+        double resultadoAtual = Calculadora.somarDoisNumeros(Integer.valueOf(txtnum1), Integer.valueOf(txtnum2));
+// Validação
+        assertEquals(Double.valueOf(resultadoEsperado), resultadoAtual);
+    }
+
+
     @Test
-    public void testeSubtrairDoisNumeros(){
+    public void testeSubtrairDoisNumeros() {
 // Configurão - Execução - Validação
 // Valores de entrada
         double num1 = 25;
