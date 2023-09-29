@@ -1,0 +1,41 @@
+Testes Web = Aplicações Web = Sites
+
+Automação Web
+- Paga: Mercury -> HP -> Borland(Microfocus)
+- Open Source: Selenium(www.selenium.dev)
+
+Permitem que os testes sejam executados quantas vezes for necessário
+- Testes de regressão
+
+Multiplos Browsers: Chrome, Opera, Firefox, Edge, Safari, etc.
+Multiplos Sistemas Operacionais(O.S.): Windows, Linux, OSX(Mac).
+Multiplas versões de browser: Chrome (111), Beta (112), Alfa/Canary (113).
+Resolução: Diversas...
+
+Google Analytics: mpostrar quais as combinaçoes mais usadas
+
+Selenium Web Driver - Desde 2004 Atualmente na Versão 4.n
+Selenium IDE - Desde 2007 Gravador:Ficou estável em 2010
+
+Existem várias formas de organizar um projeto de testes Web:
+Simples - (Se IDE/ manualmente)
+Selenium + Cucumber (BDD)
+Page Objects
+
+O Selenium usa um Driver para se comunicar com o browser
+Código -> (Selenium) -> Driver -> Browser
+Existe um Driver para cada versão ou conjunto de versões de um navegador
+No caso Chrome/ Edge: 1 para cada versão
+Nos demais, normalmente, 1 versão de Driver funciona para várias de navegador
+
+Há 3 formas de configurar/ Utilizar um Driver:
+- Download manual e instala dentro do projeto -> Bom:Portátil * Ruim:Manutenção
+_ Download manual e instala em uma pasta compartilhada -> Bom:Manutenção * Ruim:Portátil
+- Gerenciador de download automático -> Bom:Manutenção + Portátil * Ruim:Usa recursos
+
+Cucumber
+- Framework para associar documentos de negócio (.feature) com os arquivos de automação
+- Plugins Gherkin e Cucumber
+- Permite que criemos  especificações e critérios  de aceite em Gherkin
+- Esse tipo de especificação é recomendado dentro da abordagem BDD (Desenvolvimento
+Direcionado por Comportamento)

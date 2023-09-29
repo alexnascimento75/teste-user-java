@@ -1,0 +1,11 @@
+id,username,firstName,lastName,email,password,phone,userStatus
+1372633669,axel,axel,nasto,axel@test.com,alex1975,989134557,0
+93712633669,jenny,Jennifer,Smith,jenny.smith@email.com,jenny12345,5551234567,1
+246813579,sarahh,Sarah,Hernandez,sarah@email.com,sarah1980,1234567890,0
+987654321,david007,David,Johnson,david.johnson@email.com,secret007,9876543210,1
+555555555,lisa_m,Lisa,Miller,lisa.m@email.com,lisa456,5555555555,0
+123456789,robertsmith,Robert,Smithson,robert@email.com,rob123,5558889999,1
+111222333,michelle23,Michelle,Brown,michelle@email.com,michelle2022,1239876543,0
+777888999,chrisP,Christopher,Peterson,chris@email.com,chris1234,7771234567,1
+333222111,emilyd,Emily,Davis,emily@email.com,emily2021,3334445555,0
+666777888,sam_w,Samuel,Watson,sam@email.com,sammy123,6669998888,1

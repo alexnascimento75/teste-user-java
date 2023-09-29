@@ -2,6 +2,7 @@
 package apiTest;
 
 // Bibliotecas
+import com.google.gson.Gson;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -144,9 +145,8 @@ public void testarIncluirUserCsv(
         String password,
         String phone,
         String userStatus) {                             //Inio Incluir CSV
-
+/*
         StringBuilder jsonBody = new StringBuilder("{");
-
         jsonBody.append("'id':" + id + ",");
                 jsonBody.append("'username´: " + username + ",");
                 jsonBody.append("'firstName': " + firstName + ",");
@@ -156,7 +156,23 @@ public void testarIncluirUserCsv(
                 jsonBody.append("'phone': " + phone + ",");
                 jsonBody.append("'userStatus' " + userStatus);
                 jsonBody.append("}");
+*/
+        User user = new User(); // Instancía a Classe User
+        user.id = id;
+        user.username = username;
+        user.firstname = firstName;
+        user.lastname = lastName;
+        user.email = email;
+        user.password = password;
+        user.phone = phone;
+        user.userStatus = userStatus;
 
+        Gson gson = new Gson(); // Instancía a Classe Gson
+        String jsonBody = gson.toJson(user);
+
+
+
+// Realizar o Teste
         given()                                                       // Dado que
                 .contentType(ct)                            // o tipo do conteúdo
                 .log().all()                                       // mostre tudo
