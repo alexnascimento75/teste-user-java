@@ -1,6 +1,6 @@
 Testes Web = Aplicações Web = Sites
 
-Automação Web
+Automação Web:
 - Paga: Mercury -> HP -> Borland(Microfocus)
 - Open Source: Selenium(www.selenium.dev)
 
@@ -12,7 +12,7 @@ Multiplos Sistemas Operacionais(O.S.): Windows, Linux, OSX(Mac).
 Multiplas versões de browser: Chrome (111), Beta (112), Alfa/Canary (113).
 Resolução: Diversas...
 
-Google Analytics: mpostrar quais as combinaçoes mais usadas
+Google Analytics: mostrar quais as combinaçoes mais usadas
 
 Selenium Web Driver - Desde 2004 Atualmente na Versão 4.n
 Selenium IDE - Desde 2007 Gravador:Ficou estável em 2010
@@ -33,9 +33,34 @@ Há 3 formas de configurar/ Utilizar um Driver:
 _ Download manual e instala em uma pasta compartilhada -> Bom:Manutenção * Ruim:Portátil
 - Gerenciador de download automático -> Bom:Manutenção + Portátil * Ruim:Usa recursos
 
-Cucumber
+Cucumber:
 - Framework para associar documentos de negócio (.feature) com os arquivos de automação
 - Plugins Gherkin e Cucumber
 - Permite que criemos  especificações e critérios  de aceite em Gherkin
 - Esse tipo de especificação é recomendado dentro da abordagem BDD (Desenvolvimento
 Direcionado por Comportamento)
+
+Page Objects / Page Factory:
+- Automação de teste mais robusta, que simplifique a manutenção e ampliação do teste
+- Programação Orientada a Objetos
+- Permite que criemos o mapeamento dos elementos separados dos scripts de automação
+- Podemos usar com ou sem as especificações em Gherkin
+
+Exemplos:
+Sem Gherkin de mapeamento para cada página ou seção repetida entre páginas ou (cabeçalho/
+rodapé/ menu)
+- Um arquivo de especificação dizendo o fluxo desejado
+- Um arquivo de passos que segue a especificação e usa o mapeamento
+
+Formas de automatizar:
+- Gravação de Script(1 arquivo)
+- Script Simples (1 arquivo)
+- Cucumber (2 arquivos: feature e step)
+- Page Object Simples (2 arquivo: mapeamento e script)
+- Page Objetc + Cucumber (3 arquivos: mapeamento, feature e steps)
+
+Cuidado com as Siglas:
+PO: Page Objects, Product Owner, POO = Programação Orientada a Objetos
+
+Automação de Teste é um Projeto
+Precisa executar todos os testes periodicamente (diariamente)
